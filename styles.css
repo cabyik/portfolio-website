@@ -1,0 +1,161 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* 顶部导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background: transparent;
+    z-index: 1000;
+    color: white;
+}
+
+.nav-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* 图片容器 */
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 单个图片容器 */
+.image-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 图片叠加文字 */
+.image-overlay {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 50px;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.overlay-left {
+    text-align: left;
+    font-weight: 300;
+}
+
+.overlay-center {
+    text-align: center;
+    font-weight: 400;
+}
+
+.overlay-right {
+    text-align: right;
+    font-weight: 300;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .nav-brand {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .image-overlay {
+        font-size: 1.5rem;
+        padding: 0 30px;
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+    .image-overlay {
+        font-size: 1rem;
+        padding: 0 20px;
+        bottom: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .overlay-left,
+    .overlay-center,
+    .overlay-right {
+        text-align: left;
+    }
+}
