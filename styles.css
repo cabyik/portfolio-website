@@ -1,13 +1,27 @@
+/* 自定义字体 */
+@font-face {
+    font-family: 'MonumentGrotesk';
+    src: url('fonts/MonumentGrotesk-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaPuHuiTi';
+    src: url('fonts/Alibaba-PuHuiTi-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+
 /* 全局样式重置 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 0;
 }
 
 body {
     background: #000000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'MonumentGrotesk', 'AlibabaPuHuiTi', sans-serif;
     overflow-x: hidden;
 }
 
