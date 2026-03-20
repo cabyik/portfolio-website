@@ -259,52 +259,53 @@ body {
 }
 
 /* CONTACT页面样式 */
-.contact-content-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
+.contact-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 80px 80px;
     color: white;
 }
 
-.contact-content-page h1 {
-    font-size: 3rem;
-    margin-bottom: 40px;
-    letter-spacing: 0.1em;
-    text-align: center;
+.contact-page h1 {
+    font-size: 1rem;
+    margin-bottom: 60px;
+    letter-spacing: 0;
 }
 
-.contact-info-section {
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 60px 0;
+}
+
+.contact-name {
+    font-size: 2rem;
+}
+
+.contact-details {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 40px;
 }
 
-.contact-item-page {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 10px;
-    border-left: 4px solid white;
+.contact-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.contact-item-page h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    letter-spacing: 0.05em;
+.contact-label {
+    font-size: 0.85rem;
+    opacity: 0.6;
 }
 
-.contact-item-page p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-.contact-note {
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    margin-top: 40px;
+.contact-value {
+    font-size: 1rem;
 }
 
 /* 响应式设计 */
